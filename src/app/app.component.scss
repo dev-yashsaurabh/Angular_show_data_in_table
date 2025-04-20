@@ -1,0 +1,12 @@
+.container {
+    width: 200px;
+    height: 20px;
+    background-color: aqua;
+}
+.progess {
+    width: 100%;
+    height: 20px;
+    background-color: yellow;
+    color: white;
+    transition: width 0.5;
+}

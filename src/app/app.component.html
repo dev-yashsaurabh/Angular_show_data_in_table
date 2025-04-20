@@ -1,0 +1,28 @@
+
+
+<h2>User List</h2>
+
+<input type="text" (input)="onSearch()" [formControl]="search">
+
+<table>
+<thead>
+  <tr>
+    <th>Id</th>
+    <td>Name</td>
+    <td>Address</td>
+    <td style="cursor: pointer" (click)="sortLat()">Latitude </td> <!--<i class="fa fa-sort-asc"></i> <i class="fa fa-sort-desc"></i>-->
+    <td>Longitude </td>
+    <td>Website</td>
+  </tr>
+</thead>
+  <tbody *ngFor="let user of data">
+    <tr>
+      <td appYellowBackground>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.address | address}}</td> <!--Using the pipe to combine the address-->
+      <td>{{user.address.geo.lat}}</td>
+      <td>{{user.address.geo.lng}}</td>
+      <td><a href={{user.website}}>{{user.website}}</a></td>
+    </tr>
+    </tbody>
+</table>
