@@ -21,7 +21,6 @@ export class AppComponent implements OnInit {
   }
 
   sortLat() {
-    // console.log(this.data);
     if(this.count===0) {
       this.data.sort((a:any,b:any)=>a.address.geo.lat - b.address.geo.lat)
       this.count++;
